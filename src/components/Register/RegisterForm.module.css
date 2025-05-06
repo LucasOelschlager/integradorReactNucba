@@ -1,0 +1,91 @@
+
+.container {
+    width: 800px;
+    height: auto;
+    display: flex;
+    margin: 40px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+
+.container h1 {
+    font-size: 2rem;
+    color: #ff7d00;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 15px;
+    width: 100%;
+    gap: 18px;
+}
+
+.formContainer label {
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.formContainer input {
+    width: 70%;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 15px 7px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.formContainer input::placeholder {
+    color: #aaa;
+}
+
+.formContainer select {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.formContainer button {
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #ff7d00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formContainer button:hover {
+    background-color: #e66a00;
+}
+
+
+.error {
+    color: #ff4d4d; /* Rojo para los errores */
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: center;
+  }

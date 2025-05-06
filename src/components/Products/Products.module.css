@@ -1,0 +1,101 @@
+.container {
+  background-color: rgb(10, 10, 10);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre productos */
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  width: 100%;
+}
+
+.product {
+  flex: 0 1 calc(20% - 20px); /* 4 productos por fila */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212;
+  border: 1px solid #444;
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 400px;
+  max-height: 1000px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  color: #e0e0e0;
+
+  button {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #ff7d00;
+    color: snow;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #e0e0e0;
+  }
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #1e1e1e;
+}
+
+.img {
+  width: 100%;
+  min-height: 700px;
+  max-height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  font-family: sans-serif;
+
+  .buttonPage {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+  }
+  .buttonPage:hover {
+    background-color: #ff7d00;
+    color: snow;
+  }
+}

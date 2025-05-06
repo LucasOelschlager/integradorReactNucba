@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Dancing Script", cursive;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 16px;
+  height: 100%;
+  overflow-x: hidden;
+}
+:root {
+  --color-primary: #ff7d00;
+  --color-secondary: #1a1a1a;
+  --color-text: #ffffff;
+  --font-family-title: "Big Shoulders Stencil", sans-serif;
+  --font-family-body: "Dancing Script", cursive;
+}

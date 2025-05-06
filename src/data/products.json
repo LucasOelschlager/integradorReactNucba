@@ -1,0 +1,287 @@
+[
+    {
+        "id":1,
+        "name":"Gibson Les Paul Standard 60s Double Trouble Vintage Tobacco Burst",
+        "price":2799.00,
+        "category": "gibson",
+        "image":"./src/data/productsImg/gibsonImg/gibson1.png"
+    },
+    {
+        "id":2,
+        "name": "Gibson Les Paul Standard 50s Double Trouble Vintage Cherry Sunburst",
+        "price": 2799.00,
+        "category": "gibson",
+        "image": "./src/data/productsImg/gibsonImg/gibson2.png"
+    },
+    {
+        "id":3,
+        "name": "Gibson Les Paul Standard 60s Faded Vintage Bourbon Burst",
+        "price": 2299.00,
+        "category": "gibson",
+        "image": "./src/data/productsImg/gibsonImg/gibson3.png"
+    },
+    {
+     "id":4,
+        "name": "Gibson Les Paul Standard 50s Faded Vintage Tobacco Burst",
+        "price": 2299.00,
+        "category": "gibson",
+        "image": "./src/data/productsImg/gibsonImg/gibson4.png"   
+    },
+    {
+        "id":5,
+           "name": "Gibson Les Paul Standard 50s Plain Top, Iced Tea ",
+           "price": 2599.00,
+           "category": "gibson",
+           "image": "./src/data/productsImg/gibsonImg/gibson5.png"   
+       },
+       {
+        "id":6,
+           "name": "SG Standard '61 Maestro Vibrola Vintage Cherry",
+           "price": 2499.00,
+           "category": "gibson",
+           "image": "./src/data/productsImg/gibsonImg/gibson6.png"   
+       },
+       {
+        "id":7,
+           "name": "SG Standard '61 Vintage Cherry",
+           "price": 1999.00,
+           "category": "gibson",
+           "image": "./src/data/productsImg/gibsonImg/gibson7.png"   
+       },
+       {
+        "id":8,
+           "name": "SG Special Ebony",
+           "price": 1599.00,
+           "category": "gibson",
+           "image": "./src/data/productsImg/gibsonImg/gibson8.png"   
+       },
+       {
+        "id":9,
+           "name": "J-45 Standard, Red Spruce Tri Burst",
+           "price": 3549.00,
+           "category": "gibson",
+           "image": "./src/data/productsImg/gibsonImg/gibson9.png"   
+       },
+       {
+        "id":10,
+           "name": "ES-335 Sixties Cherry",
+           "price": 3499.00,
+           "category": "gibson",
+           "image": "./src/data/productsImg/gibsonImg/gibson10.png"   
+       },
+       {
+        "id":11,
+           "name": "Mike McCready Stratocaster",
+           "price": 2299.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender1.png"   
+       },
+       {
+        "id":12,
+           "name": "American Vintage II 1951 Telecaster",
+           "price": 1899.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender2.png"   
+       },
+       {
+        "id":13,
+           "name":"Limited Edition Player II Telecaster®, Sparkle 3-Color Sunburst",
+           "price": 2599.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender3.png"   
+       },
+       {
+        "id":14,
+           "name":"American Ultra Stratocaster®",
+           "price": 1899.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender4.png"   
+       },
+       {
+        "id":15,
+           "name":"Player II Modified Stratocaster® HSS Floyd Rose®",
+           "price": 2000.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender5.png"   
+       },
+       {
+        "id":16,
+           "name":"Limited Edition Vintera® II '50s Jazzmaster®, 3-Color Sunburst ",
+           "price": 3000.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender6.png"   
+       },
+       {
+        "id":17,
+           "name":"Vintera® II '70s Jaguar®",
+           "price": 2500.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender7.png"   
+       },
+       {
+        "id":18,
+           "name":"Vintera® II '50s Stratocaster®",
+           "price": 2300.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender8.png"   
+       },
+       {
+        "id":19,
+           "name":"Vintera® II '50s Nocaster®",
+           "price": 2100.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender9.png"   
+       },
+       {
+        "id":20,
+           "name":"FA-125CE Dreadnought",
+           "price": 2400.00,
+           "category": "fender",
+           "image": "./src/data/productsImg/fenderImg/fender10.png"   
+       },
+    {
+     "id":21,
+        "name":"Gretsch Broadkaster® Jr.",
+        "price": 2699.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch1.png"
+    },
+    {
+     "id":22,
+        "name":"Gretsch G2622TG Streamliner™ Center Block",
+        "price": 2600.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch2.png"  
+    },
+    {
+     "id":23,
+        "name":"Gretsch Electromatic® LTD Flame Okoume Broadkaster® Jr.",
+        "price": 1499.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch3.png"  
+    },
+    {
+     "id":24,
+        "name":"Gretsch Electromatic® LTD Flame Okoume Broadkaster® Jr.",
+        "price": 2599.00,
+        "category":"gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch4.png" 
+    },
+    {
+     "id":25,
+        "name":"Gretsch Electromatic® Pristine LTD Center Block",
+        "price": 2899.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch5.png"  
+    },
+    {
+     "id":26,
+        "name":"Gretsch G5622 Electromatic® Center Block Double-Cut with V-Stoptail",
+        "price": 2400.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch6.png" 
+    },
+    {
+     "id":27,
+        "name":"Gretsch G6636T-RF Richard Fortus Signature Falcon™ ",
+        "price": 3599.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch7.png" 
+    },
+    {
+     "id":28,
+        "name":"Gretsch G6636TSL Players Edition Silver Falcon™",
+        "price": 3599.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch8.png" 
+    },
+    {
+     "id":29,
+        "name":"Gretsch G5655TG Electromatic® Center Block Jr.",
+        "price": 2400.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch9.png"
+    },
+    {
+     "id":30,
+        "name":"Gretsch G5622T Electromatic® Center Block Double-Cut with Bigsby®",
+        "price": 2400.00,
+        "category": "gretsch",
+        "image": "./src/data/productsImg/grestchImg/grestch10.png"
+    },
+    {
+     "id":31,
+        "name":"PRS Custom 24",
+        "price": 2400.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs1.png"
+    }, {
+     "id":32,
+        "name":"PRS Custon 24 Piezp",
+        "price": 2500.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs2.png"
+    },
+    {
+     "id":33,
+        "name":"PRS 40th Anniversary Custom 24-08 Semi-Hollow Limited Edition ",
+        "price": 3000.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs3.png"
+    },
+    {
+     "id":34,
+        "name":"PRS Custom 24-08",
+        "price": 2800.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs4.png"
+    },
+    {
+     "id":35,
+        "name":"PRS McCarty ",
+        "price": 3000.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs5.png"
+    },
+    {
+     "id":36,
+        "name":"PRS McCarty 594",
+        "price": 3000.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs6.png"
+    },
+    {
+     "id":37,
+        "name":"PRS Studio",
+        "price": 2200.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs7.png"
+    },
+    {
+     "id":38,
+        "name":"PRS Santana Retro",
+        "price": 3200.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs8.png"
+    },
+    {
+     "id":39,
+        "name":"PRS Dgt",
+        "price": 2400.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs9.png"
+    },
+    {
+     "id":40,
+        "name":"PRS Kanami Limited Edition ",
+        "price": 3200.00,
+        "category": "prs",
+        "image": "./src/data/productsImg/prsImg/prs10.png"
+    }
+
+    
+
+
+
+    
+]
