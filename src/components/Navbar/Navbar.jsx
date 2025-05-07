@@ -2,13 +2,15 @@ import { List } from "../List/List";
 import { useContext } from "react";
 import styledNavbar from "../Navbar/Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { UserContext } from "../../context/userContext";
-
+import { CartComponent } from "../cartComponent/CartComponent";
+import { CartContext } from "../../context/cartContext";
 export const Navbar = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   return (
     <header className={styledNavbar.header}>
       <nav className={styledNavbar.navbar}>
@@ -41,16 +43,21 @@ export const Navbar = () => {
         </List>
 
         <div className={`${styledNavbar.btnContainer}`}>
-          <button className={`${styledNavbar.cartBtn}`}>
+          <button
+            className={`${styledNavbar.cartBtn}`}
+            onClick={() => setIsCartOpen(true)}
+          >
             <FontAwesomeIcon
               icon={faCartShopping}
               style={{ color: "#ff7d00" }}
+              onClick={() => setIsCartOpen(true)}
             />
           </button>
           <button className={`${styledNavbar.loginBtn}`}>
             <Link to={"/login"}>Iniciar Sesión</Link>
           </button>
         </div>
+        {isCartOpen === true ? <CartComponent /> : null}
       </nav>
     </header>
   );

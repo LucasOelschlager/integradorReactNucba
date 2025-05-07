@@ -1,72 +1,27 @@
-import React from 'react'
-
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { List } from "../List/List";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styledCart from "../cartComponent/CartComponent.module.css";
+import { useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 export const CartComponent = () => {
-       const dispatch = useDispatch()
-        const total = useSelector((state) => state.cart.total);
-        const cart = useSelector((state) => state.cart.items)
-        const handleRemoveFromCart = (id) => {
-            dispatch(removeFromCart(id))
-        }
-    
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   return (
-    <div
-                className={
-                    isCartOpen == true
-                        ? `${styledNavbar.cartActive}`
-                        : `${styledNavbar.cart} `
-                }
-            >
-                <div className="flex gap-4 cursor-pointer">
-                    {/*BOTON PARA CERRAR EL CARRITO */}
-                    <X
-                        color="#FF7D00"
-                        className="cursor-pointer"
-                        size={30}
-                        onClick={() => setIsCartOpen(!isCartOpen)}
-                    />
-                    <h2 className="text-2xl text-[#FF7D00]">Carrito...</h2>
-                </div>
-                <List query={`${styledNavbar.itemsContainer}`}>
-                    {cart.length === 0 ? <p className="font-serif text-2xl">El carrito está vacio...</p> :
-                        cart.map((e) => {
-                            return (<li key={e.id} className={`${styledNavbar.cartItem}`}>
-                                <X onClick={() => handleRemoveFromCart(e.id)} className={`${styledNavbar.closeCartBtn}`} color="#FF7D00" size={30} />
-                                <img src={e.image} />
-                                <div className={`${styledNavbar.itemInfo}`}>
-                                    <h4>{e.name}</h4>
-                                    <p>Precio: ${e.price * e.quantity}</p>
-                                    <div className={`${styledNavbar.quantityControls}`}>
-                                        <button  onClick={() => {
-                                            dispatch(updateQuantity({ id: e.id, quantity: e.quantity + 1 }))
-                                            dispatch(calculateTotal())
-                                        }}>
-                                            +
-                                        </button>
-                                        <span>{e.quantity}</span>
-                                        <button
-                                            onClick={() => {
-                                                if (e.quantity > 1) {
-                                                    dispatch(updateQuantity({ id: e.id, quantity: e.quantity - 1 }));
-                                                    dispatch(calculateTotal())
-                                                } else {
-                                                    dispatch(removeFromCart(e.id));
-                                                    dispatch(calculateTotal())
-                                                }
-                                            }}
-                                        >
-                                            -
-                                        </button>
-                                    </div>
-                                </div>
-                            </li>
-                            )
-                        })
-                    }
-                </List>
-                <div className="absolute bottom-[10px] flex items-center justify-around w-[100%] right-0 ">
-                    <h4 className="text-2xl text-[#FF7D00] ">Total: ${total}</h4>
-                    <button className={`${styledNavbar.buttonCart}`}>Comprar</button>
-                </div>
-            </div>
-  )
-}
+    <div className={`${styledCart.cart}`}>
+      <div className={`${styledCart.closeCart}`}>
+        <FontAwesomeIcon
+          icon={faXmark}
+          className="fa-lg"
+          style={{ color: "#ff7d00" }}
+          onClick={() => setIsCartOpen(false)}
+        />
+        <h2>Carrito...</h2>
+      </div>
+      <List query={`${styledCart.itemsContainer}`}></List>
+      <div className={`${styledCart.total}`}>
+        <p>TOTAL: </p>
+        <button>Comprar</button>
+      </div>
+    </div>
+  );
+};
