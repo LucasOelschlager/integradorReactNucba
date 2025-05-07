@@ -4,7 +4,7 @@
         "name":"Gibson Les Paul Standard 60s Double Trouble Vintage Tobacco Burst",
         "price":2799.00,
         "category": "gibson",
-        "image":"./src/data/productsImg/gibsonImg/gibson1.png"
+        "image":"/productsImg/gibsonImg/gibson1.png"
     },
     {
         "id":2,
