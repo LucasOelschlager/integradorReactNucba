@@ -1,81 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Dancing+Script:wght@400..700&display=swap");
 
-.header {
-  background-color: rgb(10, 10, 10);
+/*NAVBAR*/
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 25px;
- 
-  z-index: 2000;
-}
-
-.menu {
-  display: none;
-}
-
-.navbarRes {
-  display: none;
-}
-
-.optionsMenu {
-  display: block;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  transform: translateX(100%);
-  border-radius: 0 0 0 10px;
-  right: 0;
-  top: 100px;
-  height: 250px;
-  width: 200px;
-  padding: 20px 20px;
+  padding: 1rem 2rem;
   background-color: #0a0a0a;
-  transition: 0.3s all ease-in-out;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-
-  .listMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
+  color: white;
+  height: 150px;
 }
 
-.optionsMenuAct {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  transform: translateX(0);
-  border-radius: 0 0 0 10px;
-  right: 0;
-  top: 100px;
-  height: 250px;
-  width: 200px;
-  padding: 20px 20px;
-  background-color: #0a0a0a;
-  transition: 0.3s all ease-in-out;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.listMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  li {
-    font-size: 18px;
-    cursor: pointer;
+.logoContainer {
+  height: auto;
+  padding: 20px;
+  img {
+    margin: 0 auto;
   }
-  li:hover {
-    color: #ff7d00;
-    transition: 0.5s;
+
+  h1 {
+    font-family: "Big Shoulders Stencil", cursive;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -83,237 +33,73 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
-  padding: 10px 20px;
-  ul {
-    display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+
+  li {
+    font-size: 1.2rem;
+    font-family: "Big Shoulders Stencil", cursive;
+    color: #ff7d00;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  li:hover {
+    color: #cc6600;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
   }
 }
 
-.logginButton {
-  background-color: #ff7d00;
-  color: snow;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-left: auto;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.logginButton:hover {
-  background-color: #e06b00;
-  transform: scale(1.05);
-}
-
-.navbar_link {
-  color: #ff7d00;
-  text-decoration: none;
-  font-size: 22px;
-  margin: 0 10px;
-  transition: 0.5s;
-}
-
-.navbar_link:hover {
-  color: #e06b00;
-  text-decoration: underline;
-  transition: 0.5s;
-}
-
-.title {
-  font-family: "Big Shoulders Stencil";
-  font-size: 30px;
-  color: #ff7d00;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.button {
-  background-color: #ff7d00;
-  color: snow;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.cart {
-  display: flex;
-  width: 30%;
-  background-color: #1a1a1a;
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 20px;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-  border-radius: 10px 0 0 10px;
-  transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.cartActive {
-  width: 30%;
-  background-color: #1a1a1a; /* Color de fondo más suave */
-  height: 100vh;
-  position: absolute;
-  right: 0;
-
-  top: 0;
-  padding: 20px;
-  display: block;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-  border-radius: 10px 0 0 10px;
-  transform: translateX(0);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.cart h2 {
-  color: #ff7d00;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.buttonCart {
-  background-color: #ff7d00;
-  color: white;
-  border: none;
-  padding: 5px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/*PRODUCTOS DEL CARRITO*/
-
-.itemsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Asegura que los elementos comiencen desde arriba */
-  align-items: center;
-  width: 100%;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 10px 0;
-  gap: 10px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: #1a1a1a;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border: 1px solid #333;
-}
-
-.cartItem {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #333;
-  gap: 15px;
-}
-
-.cartItem img {
-  width: 100px;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.itemInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-}
-
-.cartItem h4 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  color: #ff7d00;
-}
-
-.cartItem p {
-  font-size: 14px;
-  color: #ff7d00;
-  margin: 5px 0;
-}
-
-.quantityControls {
+.btnContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-.quantityControls button {
-  background-color: #ff7d00;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 14px;
-}
+  gap: 2rem;
 
-.cartItem .quantityControls button:hover {
-  background-color: #e66a00;
-}
-
-/* Cantidad del producto */
-.cartItem .quantityControls span {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-}
-
-.buttonCart:hover {
-  background-color: #e06b00;
-  transform: scale(1.05);
-}
-@media (max-width: 1240px) {
-  .navbar {
-    display: none;
-  }
-
-  .navbarRes {
+  .cartBtn {
+    font-size: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 300px;
-    background-color: rgb(10, 10, 10);
-    height: 55vh;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .navbarResAct {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 300px;
-    background-color: rgb(10, 10, 10);
-    height: 55vh;
-    transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .menu {
-    display: block;
+    color: #ff7d00;
     cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cartBtn:hover {
+    transform: scale(1.1);
+  }
+
+  .loginBtn {
+    background-color: #ff7d00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "Big Shoulders Stencil", cursive;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .loginBtn:hover {
+    background-color: #e06b00;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 }
