@@ -12,6 +12,10 @@ header {
   height: 150px;
 }
 
+.logoContainerRes {
+  display: none;
+}
+
 .logoContainer {
   height: auto;
   padding: 20px;
@@ -27,6 +31,10 @@ header {
     margin: 0;
     padding: 0;
   }
+}
+
+.menuClose {
+  display: none;
 }
 
 .navbar {
@@ -45,7 +53,7 @@ header {
   justify-content: center;
   align-items: center;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   gap: 2rem;
 
@@ -102,4 +110,89 @@ header {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+}
+
+/*responsive*/
+
+@media (max-width: 480px) {
+  /*ESTILIZADO RESPONSIVE DEL NAVBAR Y EL MENU*/
+  header {
+    display: flex;
+  }
+  .menuClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 20px;
+    color: #ff7d00;
+    cursor: pointer;
+  }
+
+  .logoContainer {
+    display: none;
+  }
+
+  .logoContainerRes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    img {
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: "Big Shoulders Stencil", cursive;
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #0a0a0a;
+    z-index: 1002;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbarRes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #0a0a0a;
+    z-index: 1002;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btnContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /*CARRITO RESPONSIVE*/
 }
