@@ -1,31 +1,61 @@
-import styledContactForm from "../Contact/Contact.module.css"
 
+import styledContactForm from "../Contact/Contact.module.css"
+import { Field, Form, Formik, } from "formik"
+import { useState } from "react"
+import * as Yup from 'yup'
 export const Contact = () => {
+
+    const [loading, setIsLoading] = useState(false)
+
+    const initialValues = {
+        name: '',
+        lastName: '',
+        email: '',
+        consulta: '',
+    }
+
+    const handleSubmit = (values, {resetForm}) => {
+            setTimeout(() => {
+                setIsLoading(true)
+                alert('Consulta enviada con exito')
+                resetForm();
+            }, 3000)
+            setIsLoading(false)
+    }
+
+    const schema = Yup.object({
+        name: Yup.string().min(4, 'El nombre debe tener 4 carácteres (como minimo)').required('El nombre es obligatorio'),
+        lastName:Yup.string().min(4, 'El apellido debe tener 4 carácteres (como minimo)').required('El apellido es obligatorio'),
+        email: Yup.string().email('El email no es valido').required('El email es obligatorio'),
+        consulta: Yup.string().min(10, 'La consulta debe tener al menos 10 caracteres').required('La consulta es obligatoria')
+    })
+
     return (
+        <Formik initialValues={initialValues} validationSchema={schema} onSubmit={handleSubmit}>
+        {({errors, touched}) => (       
         <div className="flex " id="contactForm">
             <div className={`${styledContactForm.container}`}>
                 <h3 className="text-3xl">Solicitá asesoramiento</h3>
                 <p className="text-2xl" > Te contactamos!</p >
-                <form action="" className={`${styledContactForm.formulario}`}>
-                    <label htmlFor="nameInput">
-                        Nombre:
-                        <input type="text" name="" id="nameInput" />
-                    </label>
+                <Form action="" className={`${styledContactForm.formulario}`}>
+                    <label htmlFor="nameInput">Nombre: </label>
+                    <Field type="text" name="name" id="nameInput" />
+                    {touched.name && errors.name ? <p className={`${styledContactForm.error}`}>{errors.name}</p> : null}
 
-                    <label htmlFor="lastNameInput">
-                        Apellido:
-                        <input type="text" name="" id="lastNameInput" />
-                    </label>
-                    <label htmlFor="mailInput">
-                        Email:
-                        <input type="email" name="" id="mailInput" />
-                    </label>
-                    <label htmlFor="textInput">
-                        Consulta:
-                        <textarea name="" id=""></textarea>
-                    </label>
-                    <button>Enviar!</button>
-                </form>
+                    <label htmlFor="lastNameInput">Apellido:</label>
+                    <Field type="text" name="lastName" id="lastNameInput" />
+                    {touched.lastName && errors.lastName ? <p className={`${styledContactForm.error}`}>{errors.lastName}</p> : null}
+
+                    <label htmlFor="mailInput">Email:</label>
+                    <Field type="email" name="email" id="mailInput" />
+                    {touched.email && errors.email ? <p className={`${styledContactForm.error}`}>{errors.email}</p> : null}
+
+                    <label htmlFor="textInput">Consulta:</label>
+                    <Field as="textarea" name="consulta" id="textInput" />
+                    {touched.consulta && errors.consulta ? <p className={`${styledContactForm.error}`}>{errors.consulta}</p> : null}
+
+                    <button type="submit">{!loading === true ? 'Enviando...' : 'Enviar'}</button>
+                </Form>
             </div >
             <div className={`${styledContactForm.mapContainer}`}>
                 <h3 className="text-3xl">O visitanos en nuestra sucursal!</h3>
@@ -41,6 +71,8 @@ export const Contact = () => {
                     ></iframe>
                 </div>
             </div>
-        </div>
+            </div>   
+         )}
+        </Formik> 
     )
 }
