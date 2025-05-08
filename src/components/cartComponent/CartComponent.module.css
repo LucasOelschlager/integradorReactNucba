@@ -1,4 +1,4 @@
-.cart {
+.cartAct {
   width: 40%;
   position: absolute;
   display: flex;
@@ -11,6 +11,7 @@
   height: 100vh;
   color: white;
   padding: 20px;
+  transition: all 0.3s ease-in-out;
 
   .closeCart {
     display: flex;
@@ -42,6 +43,93 @@
       font-size: 1.2rem;
       cursor: pointer;
       border-radius: 5px;
+    }
+  }
+}
+
+.cartNotAct {
+  width: 40%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  right: 0;
+  top: 0;
+  background-color: #0a0a0a;
+  height: 100vh;
+  color: white;
+  padding: 20px;
+  transform: translateX(200%);
+  transition: all 0.3s ease-in-out;
+  .closeCart {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    font-family: "Big Shoulders Stencil";
+
+    h2 {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin: 0 auto;
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+    button {
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cartAct {
+    width: 100%;
+    padding: 10px;
+    .closeCart {
+      gap: 20px;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    .total {
+      font-size: 1rem;
+      button {
+        font-size: 1rem;
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  .cartNotAct {
+    width: 100%;
+    padding: 10px;
+    .closeCart {
+      gap: 20px;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    .total {
+      font-size: 1rem;
+      button {
+        font-size: 1rem;
+        padding: 5px 10px;
+      }
     }
   }
 }

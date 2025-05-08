@@ -74,15 +74,14 @@ export const Navbar = () => {
         <div className={`${styledNavbar.btnContainer}`}>
           <button
             className={`${styledNavbar.cartBtn}`}
-            onClick={() => setIsCartOpen(true)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsCartOpen(!isCartOpen);
+            }}
           >
             <FontAwesomeIcon
               icon={faCartShopping}
               style={{ color: "#ff7d00" }}
-              onClick={() => {
-                setIsMenuOpen(false);
-                setIsCartOpen(!isCartOpen);
-              }}
             />
           </button>
           <button className={`${styledNavbar.loginBtn}`}>
@@ -90,7 +89,7 @@ export const Navbar = () => {
           </button>
         </div>
       </nav>
-      {isCartOpen === true ? <CartComponent /> : null}
+      <CartComponent />
     </header>
   );
 };

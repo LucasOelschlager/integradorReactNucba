@@ -7,12 +7,18 @@ import { CartContext } from "../../context/cartContext";
 export const CartComponent = () => {
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   return (
-    <div className={`${styledCart.cart}`}>
+    <div
+      className={
+        isCartOpen === true
+          ? `${styledCart.cartAct}`
+          : `${styledCart.cartNotAct}`
+      }
+    >
       <div className={`${styledCart.closeCart}`}>
         <FontAwesomeIcon
           icon={faXmark}
           className="fa-lg"
-          style={{ color: "#ff7d00" }}
+          style={{ color: "#ff7d00", fontSize: "25px" }}
           onClick={() => setIsCartOpen(false)}
         />
         <h2>Carrito...</h2>
