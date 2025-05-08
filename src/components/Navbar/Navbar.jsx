@@ -2,6 +2,7 @@ import { List } from "../List/List";
 import { use, useContext, useState } from "react";
 import styledNavbar from "../Navbar/Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logoNavbar from "../../assets/navbar/logoNavbar.png";
 import {
   faCartShopping,
   faXmark,
@@ -21,11 +22,7 @@ export const Navbar = () => {
   return (
     <header className={styledNavbar.header}>
       <div className={`${styledNavbar.logoContainerRes}`}>
-        <img
-          src="./src/assets/navbar/logoNavbar.png"
-          alt=""
-          className="size-25"
-        />
+        <img src={logoNavbar} alt="" className="size-25" />
         <h1 className={styledNavbar.title}>Rosario Guitar Store</h1>
       </div>
       <button
