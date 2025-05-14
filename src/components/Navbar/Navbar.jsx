@@ -109,7 +109,7 @@ export const Navbar = () => {
           ) : (
             <button
               className={`${styledNavbar.loginBtn}`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => setIsMenuOpen(false)}
             >
               <Link to={"/login"}>Iniciar Sesión</Link>
             </button>

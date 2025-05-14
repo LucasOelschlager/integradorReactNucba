@@ -306,3 +306,130 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cartAct {
+    width: 80%;
+    height: 80vh;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .cartNotAct {
+    width: 80%;
+    height: 100vh;
+    padding: 10px;
+    transform: translateX(100%);
+  }
+
+  .closeCart {
+    gap: 20px;
+  }
+
+  .closeCart h2 {
+    font-size: 1.5rem;
+  }
+
+  .total {
+    font-size: 1rem;
+  }
+
+  .total button {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .cartItemImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cartItemName {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cartAct {
+    width: 60%; /* Ajusta el ancho al 50% de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 15px; /* Espaciado interno */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el carrito */
+  }
+
+  .cartNotAct {
+    width: 60%; /* Mantén el mismo ancho que el carrito activo */
+    height: 100vh;
+    padding: 15px;
+    transform: translateX(100%); /* Oculta el carrito fuera de la pantalla */
+  }
+
+  .closeCart {
+    gap: 30px; /* Ajusta el espacio entre los elementos */
+  }
+
+  .closeCart h2 {
+    font-size: 1.8rem; /* Tamaño de fuente ligeramente más pequeño */
+  }
+
+  .total {
+    font-size: 1.1rem; /* Ajusta el tamaño de fuente */
+  }
+
+  .total button {
+    font-size: 1.1rem;
+    padding: 8px 16px; /* Botón más compacto */
+  }
+
+  .cartItemImage {
+    width: 250px; /* Ajusta el tamaño de las imágenes */
+    height: 250px;
+  }
+
+  .cartItemName {
+    font-size: 1.1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .cartItemDetails {
+    gap: 10px; /* Espaciado entre los detalles del producto */
+  }
+
+  .removeButton {
+    padding: 8px 12px; /* Botón más compacto */
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .cartAct {
+    width: 50%;
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .cartNotAct {
+    width: 50%;
+    height: 100vh;
+    padding: 20px;
+    transform: translateX(100%);
+  }
+
+  .closeCart {
+    gap: 40px;
+  }
+
+  .closeCart h2 {
+    font-size: 2rem;
+  }
+
+  .total {
+    font-size: 1.2rem;
+  }
+
+  .total button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}
