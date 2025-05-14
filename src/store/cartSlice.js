@@ -7,7 +7,7 @@ const loadCartFromLocalStorage = () => {
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: [],
+  initialState: loadCartFromLocalStorage(),
   reducers: {
     addToCart: (state, action) => {
       const product = action.payload;

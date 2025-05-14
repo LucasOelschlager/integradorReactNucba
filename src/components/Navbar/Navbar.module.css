@@ -9,7 +9,8 @@ header {
   padding: 1rem 2rem;
   background-color: #0a0a0a;
   color: white;
-  height: 150px;
+  height: 100px;
+  width: 100%;
 }
 
 .logoContainerRes {
@@ -20,6 +21,8 @@ header {
   height: auto;
   padding: 20px;
   img {
+    height: 70px;
+    width: 70px;
     margin: 0 auto;
   }
 
@@ -29,7 +32,6 @@ header {
     color: var(--color-primary);
     text-align: center;
     margin: 0;
-    padding: 0;
   }
 }
 
@@ -43,6 +45,7 @@ header {
   align-items: center;
   width: 100%;
   max-width: 100%;
+
   margin: 0 auto;
   gap: 2rem;
 }
@@ -65,6 +68,81 @@ header {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
+  li:hover {
+    color: #cc6600;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.userBtn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.userOptionsClose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 200px;
+  height: 200px;
+  background-color: #0a0a0a;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  p {
+    font-size: 1.2rem;
+    font-family: "Big Shoulders Stencil", cursive;
+    color: #ff7d00;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+.userOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 200px;
+  height: 200px;
+  background-color: #0a0a0a;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+  font-family: roboto;
+
+  p {
+    font-size: 1.2rem;
+    font-family: "Big Shoulders Stencil", cursive;
+    color: #ff7d00;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+.userList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  li {
+    font-size: 1.2rem;
+    font-family: "Big Shoulders Stencil", cursive;
+    color: #ff7d00;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
   li:hover {
     color: #cc6600;
     text-decoration: underline;
@@ -141,6 +219,8 @@ header {
     height: auto;
     padding: 20px;
     img {
+      height: 70px;
+      width: 70px;
       margin: 0 auto;
     }
 
@@ -157,12 +237,14 @@ header {
   .navbar {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     background-color: #0a0a0a;
     z-index: 1002;
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 0;
+    height: 350px;
     width: 100%;
     padding: 20px 0;
     transform: translateX(-100%);
@@ -176,8 +258,9 @@ header {
     background-color: #0a0a0a;
     z-index: 1002;
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 0;
+    height: 350px;
     width: 100%;
     padding: 20px 0;
     transform: translateX(0);
@@ -194,5 +277,82 @@ header {
     gap: 1rem;
   }
 
-  /*CARRITO RESPONSIVE*/
+  .userOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    background-color: #0a0a0a;
+    position: absolute;
+    top: 350px;
+    right: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+
+    p {
+      font-size: 1.2rem;
+      font-family: "Big Shoulders Stencil", cursive;
+      color: #ff7d00;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  .userOptionsClose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    background-color: #0a0a0a;
+    position: absolute;
+    top: 350px;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    p {
+      font-size: 1.2rem;
+      font-family: "Big Shoulders Stencil", cursive;
+      color: #ff7d00;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .navbarRes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

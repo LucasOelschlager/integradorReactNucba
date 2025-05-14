@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/layout";
 import { Home } from "./routes/Home";
 import { Nosotros } from "./routes/Nosotros";
-import { Contacto } from "./routes/Contacto";
 import { Login } from "./routes/Login";
 import { UserProvider } from "./context/userContext";
 import { CategoryProvider } from "./context/categoryContext";
@@ -21,7 +20,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/nosotros" element={<Nosotros />} />
-              <Route path="/contacto" element={<Contacto />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
