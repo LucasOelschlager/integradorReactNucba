@@ -33,7 +33,7 @@ export const Navbar = () => {
   return (
     <header className={styledNavbar.header}>
       <div className={`${styledNavbar.logoContainerRes}`}>
-        <img src="/assets/navbar/logoNavbar.png" alt="" className="size-25" />
+        <img src="/img/logoNavbar.png" alt="" className="size-25" />
         <h1 className={styledNavbar.title}>Rosario Guitar Store</h1>
       </div>
       <button
