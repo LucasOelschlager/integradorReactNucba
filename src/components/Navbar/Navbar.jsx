@@ -1,5 +1,5 @@
 import { List } from "../List/List";
-import { useContext, useState, useEffect, act } from "react";
+import { useContext, useState, useEffect } from "react";
 import styledNavbar from "../Navbar/Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logoNavbar from "../../assets/navbar/logoNavbar.png";
