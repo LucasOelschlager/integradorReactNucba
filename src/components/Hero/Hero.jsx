@@ -31,7 +31,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className={styledHero.image}>
-          <img src="./public/img/guitarrasHero.jpeg" alt="" />
+          <img src=" /img/guitarrasHero.jpeg" alt="" />
         </div>
       </div>
     </>

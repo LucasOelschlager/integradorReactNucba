@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { CartComponent } from "../cartComponent/CartComponent";
 import { CartContext } from "../../context/cartContext";
-import { UserOptions } from "../userOptions/userOptions";
+import { UserOptions } from "../userOptions/UserOptions";
 import { getActiveUser } from "../../utils/localStorage";
 
 export const Navbar = () => {
