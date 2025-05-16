@@ -38,7 +38,10 @@ export const ContactForm = () => {
   });
 
   return (
-    <div className={`${styledContactForm.section_contact_container}`}>
+    <div
+      className={`${styledContactForm.section_contact_container}`}
+      id="contactForm"
+    >
       <Formik
         initialValues={initialValues}
         validationSchema={schema}

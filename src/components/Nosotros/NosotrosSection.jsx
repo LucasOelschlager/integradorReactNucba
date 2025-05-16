@@ -1,7 +1,7 @@
 import styles from "./NosotrosSection.module.css";
 
 export const NosotrosSection = () => (
-  <section className={styles.nosotrosSection}>
+  <section className={styles.nosotrosSection} id="aboutUs">
     <div className={styles.content}>
       <h2>Sobre Nosotros</h2>
       <p>
