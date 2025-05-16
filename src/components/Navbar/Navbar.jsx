@@ -33,7 +33,12 @@ export const Navbar = () => {
   return (
     <header className={styledNavbar.header}>
       <div className={`${styledNavbar.logoContainerRes}`}>
-        <img src="/img/logoNavbar.png" alt="" className="size-25" />
+        <img
+          src="/img/logoNavbar.png"
+          alt="Logo"
+          className="size-25"
+          loading="lazy"
+        />
         <h1 className={styledNavbar.title}>Rosario Guitar Store</h1>
       </div>
       <button
@@ -55,9 +60,10 @@ export const Navbar = () => {
       >
         <div className={`${styledNavbar.logoContainer}`}>
           <img
-            src="./src/assets/navbar/logoNavbar.png"
-            alt=""
+            src="/img/logoNavbar.png"
+            alt="Logo"
             className="size-25"
+            loading="lazy"
           />
           <h1 className={styledNavbar.title}>Rosario Guitar Store</h1>
         </div>
