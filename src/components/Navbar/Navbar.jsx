@@ -2,7 +2,7 @@ import { List } from "../List/List";
 import { useContext, useState, useEffect } from "react";
 import styledNavbar from "../Navbar/Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { useRef } from "react";
 import { User } from "lucide-react";
 import { userOptionsContext } from "../../context/userOptionsContext";
 import {
@@ -22,6 +22,8 @@ export const Navbar = () => {
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   const [activeUser, setActiveUser] = useState(getActiveUser());
   const { isOptionsOpen, setIsOptionsOpen } = useContext(userOptionsContext);
+  const [showNavbar, setShowNavbar] = useState(false);
+  useEffect(() => {}, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,7 +33,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={styledNavbar.header}>
+    <header className={`${styledNavbar.header}`}>
       <div className={`${styledNavbar.logoContainerRes}`}>
         <img
           src="/img/logoNavbar.png"

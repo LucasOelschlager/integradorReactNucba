@@ -11,6 +11,8 @@ header {
   color: white;
   height: 100px;
   width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 
 .logoContainerRes {
@@ -37,6 +39,18 @@ header {
 
 .menuClose {
   display: none;
+}
+
+.show {
+  top: 0;
+  transition: top 0.3s;
+}
+.hide {
+  top: -100px;
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar {
