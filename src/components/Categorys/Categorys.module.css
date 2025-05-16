@@ -1,26 +1,26 @@
 .container {
   width: 100%;
   display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente si es necesario */
+  justify-content: center;
+  align-items: center;
   padding: 40px;
-  background-color: rgb(10, 10, 10); /* Fondo oscuro */
+  background-color: rgb(10, 10, 10);
 }
 
 .categoryContainer {
   padding-top: 40px;
-  background-color: rgb(10, 10, 10); /* Fondo oscuro */
+  background-color: rgb(10, 10, 10);
 }
 
 .list {
   display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
-  gap: 20px; /* Espaciado entre las tarjetas */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  list-style: none; /* Elimina los estilos de lista predeterminados */
-  max-width: 1200px; /* Limita el ancho máximo del contenedor */
+  list-style: none;
+  max-width: 1200px;
 }
 
 .categoryItem {
@@ -36,7 +36,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
 
   .categoryItem:hover {
     transform: translateY(-5px);
@@ -46,58 +46,141 @@
 
 .categoryItemAct {
   cursor: pointer;
-  flex: 0 1 calc(100% / 5 - 20px); /* Ajusta para que entren tres tarjetas por fila */
+  flex: 0 1 calc(100% / 5 - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #cc6600; /* Fondo naranja oscuro que combina con el diseño */
-  border: 1px solid #333; /* Borde más oscuro */
-  border-radius: 10px; /* Bordes redondeados */
+  background-color: #cc6600;
+  border: 1px solid #333;
+  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el cursor */
+  box-sizing: border-box;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
 .categoryItem:hover {
-  transform: translateY(-5px); /* Efecto de elevación */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el cursor */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .categoryImg {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  aspect-ratio: 4 / 3; /* Mantiene una proporción de 4:3 */
-  object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin deformarse */
-  border-radius: 10px; /* Bordes redondeados para la imagen */
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   height: 500px;
 }
 
 .categoryItem h4 {
   font-size: 25px;
-  color: #ff7d00; /* Texto naranja que combina con el diseño */
+  color: #ff7d00;
   margin: 10px 0 5px;
   text-align: center;
 }
 
 .categoryItem p {
   font-size: 18px;
-  color: snow; /* Texto gris claro */
+  color: snow;
   line-height: 1.5;
   text-align: center;
 }
 .categoryItemAct h4 {
   font-size: 25px;
-  color: black; /* Texto naranja que combina con el diseño */
+  color: snow;
   margin: 10px 0 5px;
   text-align: center;
 }
 
 .categoryItemAct p {
   font-size: 18px;
-  color: snow; /* Texto gris claro */
+  color: snow;
   line-height: 1.5;
   text-align: center;
+}
+
+.categoryItem:active,
+.categoryItemAct:active {
+  background: #ff7d00;
+  color: #fff;
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(255, 125, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .categoryImg {
+    display: none;
+  }
+
+  .categoryItem,
+  .categoryItemAct {
+    width: 90vw;
+    min-height: 70px;
+    margin: 0 auto 18px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255, 125, 0, 0.15);
+    padding: 18px 0;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    min-width: calc(100% - 20px);
+  }
+
+  .categoryItem h4,
+  .categoryItemAct h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0 0 4px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #0008;
+    font-family: roboto;
+  }
+
+  .categoryItem p,
+  .categoryItemAct p {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.85;
+    margin: 0;
+    text-align: center;
+    font-family: roboto;
+  }
+
+  .categoryItemAct {
+    box-shadow: 0 4px 16px rgba(255, 125, 0, 0.25);
+    transform: scale(1.03);
+  }
+
+  .categoryItem:active,
+  .categoryItemAct:active {
+    background: #ff7d00;
+    color: #fff;
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(255, 125, 0, 0.15);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .categoryItem,
+  .categoryItemAct {
+    flex: 0 1 calc(100% / 5 - 20px);
+    min-height: 70px;
+    margin: 0 auto 18px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255, 125, 0, 0.15);
+    padding: 18px 0;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    min-width: calc(100% / 3 - 20px);
+  }
 }
