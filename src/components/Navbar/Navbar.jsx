@@ -1,8 +1,10 @@
 import { List } from "../List/List";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, act } from "react";
 import styledNavbar from "../Navbar/Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logoNavbar from "../../assets/navbar/logoNavbar.png";
+import { User } from "lucide-react";
+import { userOptionsContext } from "../../context/userOptionsContext";
 import {
   faCartShopping,
   faXmark,
@@ -13,10 +15,20 @@ import { HashLink } from "react-router-hash-link";
 import { CartComponent } from "../cartComponent/CartComponent";
 import { CartContext } from "../../context/cartContext";
 import { UserOptions } from "../userOptions/userOptions";
+import { getActiveUser } from "../../utils/localStorage";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const [activeUser, setActiveUser] = useState(getActiveUser());
+  const { isOptionsOpen, setIsOptionsOpen } = useContext(userOptionsContext);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveUser(getActiveUser());
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <header className={styledNavbar.header}>
@@ -31,6 +43,7 @@ export const Navbar = () => {
         <FontAwesomeIcon
           icon={isMenuOpen ? faXmark : faBars}
           style={{ color: "#ff7d00", fontSize: "30px" }}
+          onClick={() => setIsOptionsOpen(false)}
         />
       </button>
       <nav
@@ -81,7 +94,11 @@ export const Navbar = () => {
             />
           </button>
           <button className={`${styledNavbar.loginBtn}`}>
-            <Link to={"/login"}>Iniciar Sesión</Link>
+            {activeUser ? (
+              <User onClick={() => setIsOptionsOpen(!isOptionsOpen)} />
+            ) : (
+              <Link to={"/login"}>Iniciar Sesión</Link>
+            )}
           </button>
         </div>
       </nav>
