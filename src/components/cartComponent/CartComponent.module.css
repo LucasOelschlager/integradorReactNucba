@@ -118,7 +118,6 @@
   gap: 10px;
   width: 100%;
   padding: 10px;
-
   background-color: #1a1a1a;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -194,7 +193,7 @@
 
 .cartAct {
   width: 40%;
-  position: fixed; /* Cambiado a fixed para mantenerlo visible */
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,8 +206,8 @@
   padding: 20px;
   transition: all 0.3s ease-in-out;
   z-index: 1000;
-  overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
-  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .cartNotAct {
@@ -224,10 +223,10 @@
   height: 100vh;
   color: white;
   padding: 20px;
-  transform: translateX(100%); /* Oculto fuera de la pantalla */
+  transform: translateX(100%);
   transition: all 0.3s ease-in-out;
-  z-index: -1; /* Asegura que no interfiera con otros elementos */
-  visibility: hidden; /* Oculta el carrito visualmente y para el cursor */
+  z-index: -1;
+  visibility: hidden;
   box-sizing: border-box;
 }
 
@@ -351,52 +350,52 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .cartAct {
-    width: 60%; /* Ajusta el ancho al 50% de la pantalla */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    padding: 15px; /* Espaciado interno */
-    overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el carrito */
+    width: 60%;
+    height: 100vh;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
   }
 
   .cartNotAct {
-    width: 60%; /* Mantén el mismo ancho que el carrito activo */
+    width: 60%;
     height: 100vh;
     padding: 15px;
-    transform: translateX(100%); /* Oculta el carrito fuera de la pantalla */
+    transform: translateX(100%);
   }
 
   .closeCart {
-    gap: 30px; /* Ajusta el espacio entre los elementos */
+    gap: 30px;
   }
 
   .closeCart h2 {
-    font-size: 1.8rem; /* Tamaño de fuente ligeramente más pequeño */
+    font-size: 1.8rem;
   }
 
   .total {
-    font-size: 1.1rem; /* Ajusta el tamaño de fuente */
+    font-size: 1.1rem;
   }
 
   .total button {
     font-size: 1.1rem;
-    padding: 8px 16px; /* Botón más compacto */
+    padding: 8px 16px;
   }
 
   .cartItemImage {
-    width: 250px; /* Ajusta el tamaño de las imágenes */
+    width: 250px;
     height: 250px;
   }
 
   .cartItemName {
-    font-size: 1.1rem; /* Ajusta el tamaño del texto */
+    font-size: 1.1rem;
   }
 
   .cartItemDetails {
-    gap: 10px; /* Espaciado entre los detalles del producto */
+    gap: 10px;
   }
 
   .removeButton {
-    padding: 8px 12px; /* Botón más compacto */
+    padding: 8px 12px;
     font-size: 1rem;
   }
 }

@@ -17,12 +17,10 @@
   gap: 10px;
   font-family: sans-serif;
 
-
   .label {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 10px;
-    
   }
 
   h2 {
@@ -62,11 +60,72 @@
   }
 }
 
-
 .error {
-  color: #ff4d4d; /* Rojo para los errores */
+  color: #ff4d4d;
   font-size: 0.9rem;
   margin-top: 5px;
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  .formContainer {
+    width: 90%;
+    height: 90%;
+  }
+
+  .inputContainer input {
+    width: 90%;
+  }
+  .inputContainer {
+    width: 90%;
+  }
+
+  .formContainer button {
+    width: 90%;
+  }
+  .formContainer h2 {
+    font-size: 1.5rem;
+  }
+  .formContainer .label {
+    font-size: 1rem;
+  }
+  .error {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    width: 80%;
+    height: 80%;
+  }
+
+  .inputContainer input {
+    width: 80%;
+  }
+  .inputContainer {
+    width: 80%;
+  }
+
+  .formContainer button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .formContainer {
+    width: 70%;
+    height: 70%;
+  }
+
+  .inputContainer input {
+    width: 70%;
+  }
+  .inputContainer {
+    width: 70%;
+  }
+
+  .formContainer button {
+    width: 70%;
+  }
+}
