@@ -10,7 +10,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Espaciado entre productos */
+  gap: 20px;
   justify-content: center;
   padding: 0;
   margin: 0 auto;
@@ -19,7 +19,7 @@
 }
 
 .product {
-  flex: 0 1 calc(20% - 20px); /* 4 productos por fila */
+  flex: 0 1 calc(20% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,5 +97,11 @@
   .buttonPage:hover {
     background-color: #ff7d00;
     color: snow;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex: 0 1 calc(50% - 20px);
   }
 }
