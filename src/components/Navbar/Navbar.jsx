@@ -72,11 +72,9 @@ export const Navbar = () => {
             <Link to="/">Inicio</Link>
           </li>
           <li className={styledNavbar.navbar_link}>
-            <li>
-              <HashLink smooth to={"/#aboutUs"}>
-                Nosotros
-              </HashLink>
-            </li>
+            <HashLink smooth to={"/#aboutUs"}>
+              Nosotros
+            </HashLink>
           </li>
           <li className={styledNavbar.navbar_link}>
             <HashLink smooth to="/#products">
