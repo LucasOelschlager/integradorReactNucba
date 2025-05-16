@@ -276,62 +276,6 @@ header {
     flex-direction: column;
     gap: 1rem;
   }
-
-  .userOptions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    height: auto;
-    background-color: #0a0a0a;
-    position: absolute;
-    top: 350px;
-    right: 0;
-    transform: translateX(0);
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px; /* Opcional: bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-
-    p {
-      font-size: 1.2rem;
-      font-family: "Big Shoulders Stencil", cursive;
-      color: #ff7d00;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-  }
-
-  .userOptionsClose {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    height: auto;
-    background-color: #0a0a0a;
-    position: absolute;
-    top: 350px;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-
-    p {
-      font-size: 1.2rem;
-      font-family: "Big Shoulders Stencil", cursive;
-      color: #ff7d00;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -416,62 +360,6 @@ header {
   .btnContainer {
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .userOptions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    height: auto;
-    background-color: #0a0a0a;
-    position: absolute;
-    top: 350px;
-    right: 0;
-    transform: translateX(0);
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px; /* Opcional: bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-
-    p {
-      font-size: 1.2rem;
-      font-family: "Big Shoulders Stencil", cursive;
-      color: #ff7d00;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-  }
-
-  .userOptionsClose {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    height: auto;
-    background-color: #0a0a0a;
-    position: absolute;
-    top: 350px;
-    right: 0;
-    transform: translateX(-100%);
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-
-    p {
-      font-size: 1.2rem;
-      font-family: "Big Shoulders Stencil", cursive;
-      color: #ff7d00;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
   }
 }
 
