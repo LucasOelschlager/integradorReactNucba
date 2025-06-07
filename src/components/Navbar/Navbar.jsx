@@ -22,8 +22,6 @@ export const Navbar = () => {
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   const [activeUser, setActiveUser] = useState(getActiveUser());
   const { isOptionsOpen, setIsOptionsOpen } = useContext(userOptionsContext);
-  const [showNavbar, setShowNavbar] = useState(false);
-  useEffect(() => {}, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -74,9 +72,7 @@ export const Navbar = () => {
             <Link to="/">Inicio</Link>
           </li>
           <li className={styledNavbar.navbar_link}>
-            <HashLink smooth to={"/#aboutUs"}>
-              Nosotros
-            </HashLink>
+            <Link to={"/Nosotros"}>Nosotros</Link>
           </li>
           <li className={styledNavbar.navbar_link}>
             <HashLink smooth to="/#products">

@@ -10,7 +10,7 @@ import "./index.css";
 import { Register } from "./routes/Register";
 import { initializeUsersInLocalStorage } from "./utils/localStorage";
 import { CartProvider } from "./context/cartContext";
-
+import { Product } from "./routes/ProductPage";
 function App() {
   initializeUsersInLocalStorage();
   return (
@@ -24,6 +24,7 @@ function App() {
                 <Route path="/nosotros" element={<Nosotros />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/product" element={<Product />} />
               </Routes>
             </Layout>
           </CategoryProvider>

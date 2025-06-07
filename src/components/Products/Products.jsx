@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CategoryContext } from "../../context/categoryContext";
-import { List } from "../List/List";
+import { useNavigate } from "react-router-dom";
 import styledProducts from "../Products/Products.module.css";
 import { useDispatch } from "react-redux";
 import { addToCart, calculateTotal } from "../../store/cartSlice";
@@ -11,8 +11,12 @@ export const Products = () => {
   const handleNextPage = () => setCurrentPage((prev) => prev + 1);
   const handlePrevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleAddToCart = (product) => {
     dispatch(addToCart({ ...product, quantity: 1 }));
+  };
+  const handleProductClick = (id) => {
+    navigate(`/product?id=${id}`);
   };
   return (
     <div className={`${styledProducts.container}`} id="products">
@@ -21,14 +25,20 @@ export const Products = () => {
         <div className="flex justify center flex-col">
           <ul className={`${styledProducts.list}`}>
             {renderProducts().map((e) => (
-              <li key={e.id} className={`${styledProducts.product}`}>
+              <li
+                key={e.id}
+                className={`${styledProducts.product}`}
+                onClick={() => handleProductClick(e.id)}
+                style={{ cursor: "pointer" }}
+              >
                 <img src={e.image} alt="" className={`${styledProducts.img}`} />
                 <h4>{e.name}</h4>
                 <span className="font-serif font-bold text-[18px] ">
                   {"$" + e.price}
                 </span>
                 <button
-                  onClick={() => {
+                  onClick={(event) => {
+                    event.stopPropagation();
                     handleAddToCart(e);
                     dispatch(calculateTotal());
                   }}

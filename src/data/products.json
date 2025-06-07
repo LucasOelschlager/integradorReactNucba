@@ -1,282 +1,322 @@
 [
-    {
-        "id": 1,
-        "name": "Gibson Les Paul Standard 60s Double Trouble Vintage Tobacco Burst",
-        "price": 2799.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson1.png"
-    },
-    {
-        "id": 2,
-        "name": "Gibson Les Paul Standard 50s Double Trouble Vintage Cherry Sunburst",
-        "price": 2799.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson2.png"
-    },
-    {
-        "id": 3,
-        "name": "Gibson Les Paul Standard 60s Faded Vintage Bourbon Burst",
-        "price": 2299.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson3.png"
-    },
-    {
-        "id": 4,
-        "name": "Gibson Les Paul Standard 50s Faded Vintage Tobacco Burst",
-        "price": 2299.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson4.png"
-    },
-    {
-        "id": 5,
-        "name": "Gibson Les Paul Standard 50s Plain Top, Iced Tea ",
-        "price": 2599.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson5.png"
-    },
-    {
-        "id": 6,
-        "name": "SG Standard '61 Maestro Vibrola Vintage Cherry",
-        "price": 2499.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson6.png"
-    },
-    {
-        "id": 7,
-        "name": "SG Standard '61 Vintage Cherry",
-        "price": 1999.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson7.png"
-    },
-    {
-        "id": 8,
-        "name": "SG Special Ebony",
-        "price": 1599.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson8.png"
-    },
-    {
-        "id": 9,
-        "name": "J-45 Standard, Red Spruce Tri Burst",
-        "price": 3549.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson9.png"
-    },
-    {
-        "id": 10,
-        "name": "ES-335 Sixties Cherry",
-        "price": 3499.00,
-        "category": "gibson",
-        "image": "/productsImg/gibsonImg/gibson10.png"
-    },
-    {
-        "id": 11,
-        "name": "Mike McCready Stratocaster",
-        "price": 2299.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender1.png"
-    },
-    {
-        "id": 12,
-        "name": "American Vintage II 1951 Telecaster",
-        "price": 1899.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender2.png"
-    },
-    {
-        "id": 13,
-        "name": "Limited Edition Player II Telecaster®, Sparkle 3-Color Sunburst",
-        "price": 2599.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender3.png"
-    },
-    {
-        "id": 14,
-        "name": "American Ultra Stratocaster®",
-        "price": 1899.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender4.png"
-    },
-    {
-        "id": 15,
-        "name": "Player II Modified Stratocaster® HSS Floyd Rose®",
-        "price": 2000.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender5.png"
-    },
-    {
-        "id": 16,
-        "name": "Limited Edition Vintera® II '50s Jazzmaster®, 3-Color Sunburst ",
-        "price": 3000.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender6.png"
-    },
-    {
-        "id": 17,
-        "name": "Vintera® II '70s Jaguar®",
-        "price": 2500.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender7.png"
-    },
-    {
-        "id": 18,
-        "name": "Vintera® II '50s Stratocaster®",
-        "price": 2300.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender8.png"
-    },
-    {
-        "id": 19,
-        "name": "Vintera® II '50s Nocaster®",
-        "price": 2100.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender9.png"
-    },
-    {
-        "id": 20,
-        "name": "FA-125CE Dreadnought",
-        "price": 2400.00,
-        "category": "fender",
-        "image": "/productsImg/fenderImg/fender10.png"
-    },
-    {
-        "id": 21,
-        "name": "Gretsch Broadkaster® Jr.",
-        "price": 2699.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch1.png"
-    },
-    {
-        "id": 22,
-        "name": "Gretsch G2622TG Streamliner™ Center Block",
-        "price": 2600.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch2.png"
-    },
-    {
-        "id": 23,
-        "name": "Gretsch Electromatic® LTD Flame Okoume Broadkaster® Jr.",
-        "price": 1499.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch3.png"
-    },
-    {
-        "id": 24,
-        "name": "Gretsch Electromatic® LTD Flame Okoume Broadkaster® Jr.",
-        "price": 2599.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch4.png"
-    },
-    {
-        "id": 25,
-        "name": "Gretsch Electromatic® Pristine LTD Center Block",
-        "price": 2899.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch5.png"
-    },
-    {
-        "id": 26,
-        "name": "Gretsch G5622 Electromatic® Center Block Double-Cut with V-Stoptail",
-        "price": 2400.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch6.png"
-    },
-    {
-        "id": 27,
-        "name": "Gretsch G6636T-RF Richard Fortus Signature Falcon™ ",
-        "price": 3599.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch7.png"
-    },
-    {
-        "id": 28,
-        "name": "Gretsch G6636TSL Players Edition Silver Falcon™",
-        "price": 3599.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch8.png"
-    },
-    {
-        "id": 29,
-        "name": "Gretsch G5655TG Electromatic® Center Block Jr.",
-        "price": 2400.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch9.png"
-    },
-    {
-        "id": 30,
-        "name": "Gretsch G5622T Electromatic® Center Block Double-Cut with Bigsby®",
-        "price": 2400.00,
-        "category": "gretsch",
-        "image": "/productsImg/grestchImg/grestch10.png"
-    },
-    {
-        "id": 31,
-        "name": "PRS Custom 24",
-        "price": 2400.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs1.png"
-    },
-    {
-        "id": 32,
-        "name": "PRS Custon 24 Piezp",
-        "price": 2500.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs2.png"
-    },
-    {
-        "id": 33,
-        "name": "PRS 40th Anniversary Custom 24-08 Semi-Hollow Limited Edition ",
-        "price": 3000.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs3.png"
-    },
-    {
-        "id": 34,
-        "name": "PRS Custom 24-08",
-        "price": 2800.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs4.png"
-    },
-    {
-        "id": 35,
-        "name": "PRS McCarty ",
-        "price": 3000.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs5.png"
-    },
-    {
-        "id": 36,
-        "name": "PRS McCarty 594",
-        "price": 3000.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs6.png"
-    },
-    {
-        "id": 37,
-        "name": "PRS Studio",
-        "price": 2200.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs7.png"
-    },
-    {
-        "id": 38,
-        "name": "PRS Santana Retro",
-        "price": 3200.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs8.png"
-    },
-    {
-        "id": 39,
-        "name": "PRS Dgt",
-        "price": 2400.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs9.png"
-    },
-    {
-        "id": 40,
-        "name": "PRS Kanami Limited Edition ",
-        "price": 3200.00,
-        "category": "prs",
-        "image": "/productsImg/prsImg/prs10.png"
-    }
+  {
+    "id": 1,
+    "name": "Gibson Les Paul Standard 60s Double Trouble Vintage Tobacco Burst",
+    "price": 2799.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson1.png",
+    "description": "La Gibson Les Paul Standard 60s Double Trouble ofrece el clásico tono cálido y sustain legendario, con acabado Vintage Tobacco Burst y detalles de época."
+  },
+  {
+    "id": 2,
+    "name": "Gibson Les Paul Standard 50s Double Trouble Vintage Cherry Sunburst",
+    "price": 2799.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson2.png",
+    "description": "Inspirada en los modelos de los años 50, esta Les Paul Standard destaca por su acabado Cherry Sunburst y su sonido potente y definido."
+  },
+  {
+    "id": 3,
+    "name": "Gibson Les Paul Standard 60s Faded Vintage Bourbon Burst",
+    "price": 2299.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson3.png",
+    "description": "Con un acabado Faded Vintage Bourbon Burst, esta Les Paul Standard 60s brinda un look envejecido y un tono clásico ideal para rock y blues."
+  },
+  {
+    "id": 4,
+    "name": "Gibson Les Paul Standard 50s Faded Vintage Tobacco Burst",
+    "price": 2299.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson4.png",
+    "description": "La Les Paul Standard 50s Faded combina la estética vintage con la calidad de construcción moderna, perfecta para los amantes del sonido tradicional."
+  },
+  {
+    "id": 5,
+    "name": "Gibson Les Paul Standard 50s Plain Top, Iced Tea ",
+    "price": 2599.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson5.png",
+    "description": "Este modelo destaca por su tapa lisa y acabado Iced Tea, ofreciendo el sustain y la calidez característicos de Gibson."
+  },
+  {
+    "id": 6,
+    "name": "SG Standard '61 Maestro Vibrola Vintage Cherry",
+    "price": 2499.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson6.png",
+    "description": "La SG Standard '61 Maestro Vibrola es ideal para solos expresivos, con su vibrato clásico y acabado Vintage Cherry."
+  },
+  {
+    "id": 7,
+    "name": "SG Standard '61 Vintage Cherry",
+    "price": 1999.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson7.png",
+    "description": "Un ícono del rock, la SG Standard '61 ofrece comodidad, ligereza y un tono agresivo en su clásico color Vintage Cherry."
+  },
+  {
+    "id": 8,
+    "name": "SG Special Ebony",
+    "price": 1599.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson8.png",
+    "description": "La SG Special Ebony es una guitarra versátil y ligera, con acabado negro y el sonido potente que caracteriza a la línea SG."
+  },
+  {
+    "id": 9,
+    "name": "J-45 Standard, Red Spruce Tri Burst",
+    "price": 3549.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson9.png",
+    "description": "La J-45 Standard es una acústica legendaria, con tapa de abeto rojo y acabado Tri Burst, ideal para cantautores y músicos de folk."
+  },
+  {
+    "id": 10,
+    "name": "ES-335 Sixties Cherry",
+    "price": 3499.0,
+    "category": "gibson",
+    "image": "/productsImg/gibsonImg/gibson10.png",
+    "description": "La ES-335 Sixties Cherry combina el sustain de una guitarra sólida con la resonancia de una semi-hueca, perfecta para jazz, blues y rock."
+  },
+  {
+    "id": 11,
+    "name": "Mike McCready Stratocaster",
+    "price": 2299.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender1.png",
+    "description": "La Mike McCready Stratocaster rinde homenaje al guitarrista de Pearl Jam, con especificaciones personalizadas y un tono vintage auténtico."
+  },
+  {
+    "id": 12,
+    "name": "American Vintage II 1951 Telecaster",
+    "price": 1899.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender2.png",
+    "description": "Inspirada en la Telecaster original de 1951, este modelo ofrece un sonido brillante y twang característico, ideal para country y rock."
+  },
+  {
+    "id": 13,
+    "name": "Limited Edition Player II Telecaster®, Sparkle 3-Color Sunburst",
+    "price": 2599.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender3.png",
+    "description": "Edición limitada con acabado Sparkle Sunburst, esta Telecaster destaca por su versatilidad y estética llamativa."
+  },
+  {
+    "id": 14,
+    "name": "American Ultra Stratocaster®",
+    "price": 1899.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender4.png",
+    "description": "La American Ultra Stratocaster ofrece máxima comodidad y tecnología moderna, con un sonido claro y potente para cualquier estilo."
+  },
+  {
+    "id": 15,
+    "name": "Player II Modified Stratocaster® HSS Floyd Rose®",
+    "price": 2000.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender5.png",
+    "description": "Esta Stratocaster HSS incluye un sistema Floyd Rose para mayor expresividad y una configuración versátil para rock y metal."
+  },
+  {
+    "id": 16,
+    "name": "Limited Edition Vintera® II '50s Jazzmaster®, 3-Color Sunburst ",
+    "price": 3000.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender6.png",
+    "description": "La Jazzmaster Vintera II de los 50s ofrece un sonido suave y rico, con acabado Sunburst y detalles vintage auténticos."
+  },
+  {
+    "id": 17,
+    "name": "Vintera® II '70s Jaguar®",
+    "price": 2500.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender7.png",
+    "description": "La Jaguar Vintera II de los 70s destaca por su escala corta y circuitos únicos, ideal para surf, indie y alternativo."
+  },
+  {
+    "id": 18,
+    "name": "Vintera® II '50s Stratocaster®",
+    "price": 2300.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender8.png",
+    "description": "Inspirada en las Stratocaster de los años 50, este modelo ofrece tonos brillantes y una sensación vintage auténtica."
+  },
+  {
+    "id": 19,
+    "name": "Vintera® II '50s Nocaster®",
+    "price": 2100.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender9.png",
+    "description": "La Nocaster Vintera II reproduce fielmente el modelo original de los 50s, con un sonido potente y construcción robusta."
+  },
+  {
+    "id": 20,
+    "name": "FA-125CE Dreadnought",
+    "price": 2400.0,
+    "category": "fender",
+    "image": "/productsImg/fenderImg/fender10.png",
+    "description": "La FA-125CE es una dreadnought electroacústica cómoda y asequible, ideal para principiantes y músicos en vivo."
+  },
+  {
+    "id": 21,
+    "name": "Gretsch Broadkaster® Jr.",
+    "price": 2699.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch1.png",
+    "description": "La Broadkaster Jr. ofrece el clásico sonido Gretsch en un cuerpo más compacto, perfecta para jazz, blues y rockabilly."
+  },
+  {
+    "id": 22,
+    "name": "Gretsch G2622TG Streamliner™ Center Block",
+    "price": 2600.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch2.png",
+    "description": "La G2622TG Streamliner combina el tono vibrante de Gretsch con un bloque central para mayor sustain y control de feedback."
+  },
+  {
+    "id": 23,
+    "name": "Gretsch Electromatic® LTD Flame Okoume Broadkaster® Jr.",
+    "price": 1499.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch3.png",
+    "description": "Edición limitada con tapa de okoume flameado, esta Broadkaster Jr. destaca por su estética única y sonido brillante."
+  },
+  {
+    "id": 24,
+    "name": "Gretsch Electromatic® LTD Flame Okoume Broadkaster® Jr.",
+    "price": 2599.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch4.png",
+    "description": "Versión limitada de la Broadkaster Jr. con maderas premium y el característico tono Gretsch, ideal para escenarios."
+  },
+  {
+    "id": 25,
+    "name": "Gretsch Electromatic® Pristine LTD Center Block",
+    "price": 2899.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch5.png",
+    "description": "La Pristine LTD Center Block ofrece sustain mejorado y un acabado elegante, perfecta para músicos exigentes."
+  },
+  {
+    "id": 26,
+    "name": "Gretsch G5622 Electromatic® Center Block Double-Cut with V-Stoptail",
+    "price": 2400.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch6.png",
+    "description": "La G5622 Electromatic Double-Cut brinda versatilidad y sustain, con un diseño clásico y hardware de alta calidad."
+  },
+  {
+    "id": 27,
+    "name": "Gretsch G6636T-RF Richard Fortus Signature Falcon™ ",
+    "price": 3599.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch7.png",
+    "description": "Modelo signature de Richard Fortus, la Falcon combina lujo, potencia y detalles exclusivos para profesionales."
+  },
+  {
+    "id": 28,
+    "name": "Gretsch G6636TSL Players Edition Silver Falcon™",
+    "price": 3599.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch8.png",
+    "description": "La Silver Falcon Players Edition destaca por su acabado plateado y sonido potente, ideal para escenarios grandes."
+  },
+  {
+    "id": 29,
+    "name": "Gretsch G5655TG Electromatic® Center Block Jr.",
+    "price": 2400.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch9.png",
+    "description": "La G5655TG Center Block Jr. ofrece el tono clásico Gretsch en un formato compacto y cómodo para tocar."
+  },
+  {
+    "id": 30,
+    "name": "Gretsch G5622T Electromatic® Center Block Double-Cut with Bigsby®",
+    "price": 2400.0,
+    "category": "gretsch",
+    "image": "/productsImg/grestchImg/grestch10.png",
+    "description": "Con sistema Bigsby y doble corte, la G5622T es perfecta para solos expresivos y ritmos vibrantes."
+  },
+  {
+    "id": 31,
+    "name": "PRS Custom 24",
+    "price": 2400.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs1.png",
+    "description": "La PRS Custom 24 es el modelo insignia de la marca, con gran versatilidad tonal y acabados de lujo."
+  },
+  {
+    "id": 32,
+    "name": "PRS Custon 24 Piezp",
+    "price": 2500.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs2.png",
+    "description": "Este modelo incorpora sistema piezoeléctrico para sonidos acústicos y eléctricos en una sola guitarra."
+  },
+  {
+    "id": 33,
+    "name": "PRS 40th Anniversary Custom 24-08 Semi-Hollow Limited Edition ",
+    "price": 3000.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs3.png",
+    "description": "Edición limitada por el 40 aniversario, esta Custom 24-08 Semi-Hollow ofrece resonancia y exclusividad."
+  },
+  {
+    "id": 34,
+    "name": "PRS Custom 24-08",
+    "price": 2800.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs4.png",
+    "description": "La Custom 24-08 brinda una amplia paleta de sonidos gracias a su sistema de conmutación avanzado."
+  },
+  {
+    "id": 35,
+    "name": "PRS McCarty ",
+    "price": 3000.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs5.png",
+    "description": "Inspirada en Ted McCarty, esta PRS ofrece sustain, claridad y un diseño clásico con toques modernos."
+  },
+  {
+    "id": 36,
+    "name": "PRS McCarty 594",
+    "price": 3000.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs6.png",
+    "description": "La McCarty 594 destaca por su escala única y tono vintage, ideal para blues y rock clásico."
+  },
+  {
+    "id": 37,
+    "name": "PRS Studio",
+    "price": 2200.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs7.png",
+    "description": "La PRS Studio es una guitarra versátil con múltiples configuraciones de pastillas para cualquier género musical."
+  },
+  {
+    "id": 38,
+    "name": "PRS Santana Retro",
+    "price": 3200.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs8.png",
+    "description": "Modelo signature de Carlos Santana, con sustain infinito y un tono cálido ideal para solos melódicos."
+  },
+  {
+    "id": 39,
+    "name": "PRS Dgt",
+    "price": 2400.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs9.png",
+    "description": "La PRS DGT es el resultado de la colaboración con David Grissom, ofreciendo gran dinámica y sustain."
+  },
+  {
+    "id": 40,
+    "name": "PRS Kanami Limited Edition ",
+    "price": 3200.0,
+    "category": "prs",
+    "image": "/productsImg/prsImg/prs10.png",
+    "description": "Edición limitada Kanami, con especificaciones únicas y acabados exclusivos para coleccionistas y músicos profesionales."
+  }
 ]

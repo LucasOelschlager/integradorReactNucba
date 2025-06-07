@@ -1,7 +1,5 @@
-
+import { NosotrosSection } from "../components/Nosotros/NosotrosSection";
 
 export const Nosotros = () => {
-    return (
-        <div>Estas en la ventana nosotros</div>
-    )
-}
+  return <NosotrosSection />;
+};
