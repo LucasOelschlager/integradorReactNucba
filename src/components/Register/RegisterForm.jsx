@@ -1,63 +1,66 @@
-import React, { useState } from 'react';
-import { Formik, Field, Form } from 'formik'; 
-import * as Yup from 'yup';
-import styledRegister from '../Register/RegisterForm.module.css';
-import {useNavigate} from 'react-router'
-import { setUserInLocalStorage } from '../../utils/localStorage';
+import { useState } from "react";
+import { Formik, Field, Form } from "formik";
+import * as Yup from "yup";
+import styledRegister from "../Register/RegisterForm.module.css";
+import { useNavigate } from "react-router";
+import { setUserInLocalStorage } from "../../utils/localStorage";
 export const RegisterForm = () => {
-
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
 
   const [isRegistering, setIsRegistering] = useState(false);
   const initialValues = {
-    name: '',
-    lastName: '',
-    email: '',
-    confirmEmail: '',
-    password: '',
-    confirmPassword: '',
-    provincia: '',
-    direccion: '',
+    name: "",
+    lastName: "",
+    email: "",
+    confirmEmail: "",
+    password: "",
+    confirmPassword: "",
+    provincia: "",
+    direccion: "",
   };
 
   const schema = Yup.object({
     name: Yup.string()
-      .min(4, 'El nombre debe tener al menos 4 caracteres')
-      .required('El nombre es obligatorio'),
+      .min(4, "El nombre debe tener al menos 4 caracteres")
+      .required("El nombre es obligatorio"),
     lastName: Yup.string()
-      .min(4, 'El apellido debe tener al menos 4 caracteres')
-      .required('El apellido es obligatorio'),
+      .min(4, "El apellido debe tener al menos 4 caracteres")
+      .required("El apellido es obligatorio"),
     email: Yup.string()
-      .email('El email no es valido')
-      .required('El email es obligatorio'),
+      .email("El email no es valido")
+      .required("El email es obligatorio"),
     confirmEmail: Yup.string()
-      .oneOf([Yup.ref('email'), null], 'Los emails no coinciden')
-      .required('Confirma tu email'),
+      .oneOf([Yup.ref("email"), null], "Los emails no coinciden")
+      .required("Confirma tu email"),
     password: Yup.string()
-      .min(4, 'La contraseña debe tener al menos 4 caracteres')
-      .required('Ingrese una contraseña'),
+      .min(4, "La contraseña debe tener al menos 4 caracteres")
+      .required("Ingrese una contraseña"),
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Las contraseñas no coinciden')
-      .required('Confirme su contraseña'),
-    provincia: Yup.string().required('Ingrese una provincia'),
-    direccion: Yup.string().required('La direccion es obligatoria'),
+      .oneOf([Yup.ref("password"), null], "Las contraseñas no coinciden")
+      .required("Confirme su contraseña"),
+    provincia: Yup.string().required("Ingrese una provincia"),
+    direccion: Yup.string().required("La direccion es obligatoria"),
   });
 
   const handleSubmit = (values) => {
     setIsRegistering(true);
     setTimeout(() => {
-        const { name, lastName, password, email } = values;
-        setUserInLocalStorage({ name, lastName, password, email });
-        alert('Usuario creado correctamente, Inicie Sesión');
-        Navigate('/login');
-        setIsRegistering(false);
+      const { name, lastName, password, email } = values;
+      setUserInLocalStorage({ name, lastName, password, email });
+      alert("Usuario creado correctamente, Inicie Sesión");
+      Navigate("/login");
+      setIsRegistering(false);
     }, 3000);
-};
+  };
 
   return (
     <div className={`${styledRegister.container}`}>
       <h1>Registrate!</h1>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={schema}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={schema}
+      >
         {({ errors, touched }) => (
           <Form className={`${styledRegister.formContainer}`}>
             <label htmlFor="name">Nombre:</label>
@@ -67,7 +70,12 @@ export const RegisterForm = () => {
             ) : null}
 
             <label htmlFor="lastName">Apellido:</label>
-            <Field type="text" id="lastName" name="lastName" placeholder="Apellido" />
+            <Field
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Apellido"
+            />
             {touched.lastName && errors.lastName ? (
               <p className={`${styledRegister.error}`}>{errors.lastName}</p>
             ) : null}
@@ -79,7 +87,12 @@ export const RegisterForm = () => {
             ) : null}
 
             <label htmlFor="confirmEmail">Confirma tu Email:</label>
-            <Field type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirme su email" />
+            <Field
+              type="email"
+              id="confirmEmail"
+              name="confirmEmail"
+              placeholder="Confirme su email"
+            />
             {touched.confirmEmail && errors.confirmEmail ? (
               <p className={`${styledRegister.error}`}>{errors.confirmEmail}</p>
             ) : null}
@@ -115,24 +128,43 @@ export const RegisterForm = () => {
             ) : null}
 
             <label htmlFor="direccion">Dirección:</label>
-            <Field type="text" id="direccion" name="direccion" placeholder="Dirección" />
+            <Field
+              type="text"
+              id="direccion"
+              name="direccion"
+              placeholder="Dirección"
+            />
             {touched.direccion && errors.direccion ? (
               <p className={`${styledRegister.error}`}>{errors.direccion}</p>
             ) : null}
 
             <label htmlFor="password">Contraseña:</label>
-            <Field type="password" id="password" name="password" placeholder="Contraseña" />
+            <Field
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+            />
             {touched.password && errors.password ? (
               <p className={`${styledRegister.error}`}>{errors.password}</p>
             ) : null}
 
             <label htmlFor="confirmPassword">Confirma tu Contraseña:</label>
-            <Field type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme su contraseña" />
+            <Field
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirme su contraseña"
+            />
             {touched.confirmPassword && errors.confirmPassword ? (
-              <p className={`${styledRegister.error}`}>{errors.confirmPassword}</p>
+              <p className={`${styledRegister.error}`}>
+                {errors.confirmPassword}
+              </p>
             ) : null}
 
-            <button type="submit">{!isRegistering ? 'Registrarse' : 'Enviando...'}</button>
+            <button type="submit">
+              {!isRegistering ? "Registrarse" : "Enviando..."}
+            </button>
           </Form>
         )}
       </Formik>

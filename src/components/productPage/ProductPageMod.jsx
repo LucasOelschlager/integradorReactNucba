@@ -1,11 +1,21 @@
 import productPageCss from "./productPageMod.module.css";
 import productos from "../../data/products.json";
 import { useSearchParams } from "react-router-dom";
+import { addToCart } from "../../store/cartSlice";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Alert } from "../AlertComponent/alert";
+import { getActiveUser } from "../../utils/localStorage";
 export const ProductPageMod = () => {
+  const [showAlert, setShowAlert] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart({ ...product, quantity: 1 }));
+  };
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
   const guitar = productos.find((e) => String(e.id) === String(id));
-  console.log(guitar);
 
   return (
     <div className={`${productPageCss.container}`}>
@@ -21,8 +31,31 @@ export const ProductPageMod = () => {
         <h2>{guitar.name}</h2>
         <span>${guitar.price}</span>
         <p>{guitar.description}</p>
-        <button>AÑADIR AL CARRITO!</button>
+        <button
+          onClick={() => {
+            if (getActiveUser()) {
+              handleAddToCart(guitar);
+              setShowAlert(true);
+              setTimeout(() => setShowAlert(false), 2000);
+            } else {
+              setShowAlert(true);
+              setTimeout(() => setShowAlert(false), 2000);
+            }
+          }}
+        >
+          AÑADIR AL CARRITO!
+        </button>
       </div>
+      {showAlert && (
+        <Alert
+          message={
+            getActiveUser()
+              ? "PRODUCTO AÑADIDO CORRECTAMENTE"
+              : "Inicia Sesión o registrate para añadir un producto"
+          }
+          type={getActiveUser() ? "good" : "error"}
+        />
+      )}
     </div>
   );
 };

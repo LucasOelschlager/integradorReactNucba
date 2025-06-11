@@ -1,0 +1,48 @@
+.card {
+  background-color: #1a1a1a;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInAlert 0.5s forwards, fadeOutAlert 0.5s 1.5s forwards;
+}
+
+@keyframes fadeInAlert {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutAlert {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInAlert {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error {
+  color: #ff4c4c;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-family: roboto;
+}
+
+.good {
+  color: #4caf50;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-family: roboto;
+}

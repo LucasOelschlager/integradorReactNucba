@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
 import { useNavigate } from "react-router-dom";
 import styledProducts from "../Products/Products.module.css";
 import { useDispatch } from "react-redux";
 import { addToCart, calculateTotal } from "../../store/cartSlice";
-
+import { Alert } from "../AlertComponent/alert";
+import { getActiveUser } from "../../utils/localStorage";
 export const Products = () => {
   const { renderProducts, currentPage, setCurrentPage, categorySet } =
     useContext(CategoryContext);
+  const [showAlert, setShowAlert] = useState(false);
   const handleNextPage = () => setCurrentPage((prev) => prev + 1);
   const handlePrevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
   const dispatch = useDispatch();
@@ -39,8 +41,15 @@ export const Products = () => {
                 <button
                   onClick={(event) => {
                     event.stopPropagation();
-                    handleAddToCart(e);
-                    dispatch(calculateTotal());
+                    if (getActiveUser()) {
+                      handleAddToCart(e);
+                      dispatch(calculateTotal());
+                      setShowAlert(true);
+                      setTimeout(() => setShowAlert(false), 2000);
+                    } else {
+                      setShowAlert(true);
+                      setTimeout(() => setShowAlert(false), 2000);
+                    }
                   }}
                 >
                   Añadir al carrito
@@ -88,6 +97,16 @@ export const Products = () => {
           </div>
         </div>
       </div>
+      {showAlert && (
+        <Alert
+          message={
+            getActiveUser()
+              ? "PRODUCTO AÑADIDO CORRECTAMENTE"
+              : "Inicia Sesión o registrate para añadir un producto"
+          }
+          type={getActiveUser() ? "good" : "error"}
+        />
+      )}
     </div>
   );
 };
