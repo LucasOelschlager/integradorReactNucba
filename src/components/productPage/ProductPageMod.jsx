@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { addToCart } from "../../store/cartSlice";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Alert } from "../AlertComponent/alert";
+import { Alert } from "../AlertComponent/Alert";
 import { getActiveUser } from "../../utils/localStorage";
 export const ProductPageMod = () => {
   const [showAlert, setShowAlert] = useState(false);

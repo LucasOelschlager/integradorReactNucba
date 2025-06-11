@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import styledProducts from "../Products/Products.module.css";
 import { useDispatch } from "react-redux";
 import { addToCart, calculateTotal } from "../../store/cartSlice";
-import { Alert } from "../AlertComponent/alert";
+import { Alert } from "../AlertComponent/Alert";
 import { getActiveUser } from "../../utils/localStorage";
 export const Products = () => {
   const { renderProducts, currentPage, setCurrentPage, categorySet } =
