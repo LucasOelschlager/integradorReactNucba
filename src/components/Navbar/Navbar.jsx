@@ -69,18 +69,44 @@ export const Navbar = () => {
         </div>
         <List query={styledNavbar.list}>
           <li className={styledNavbar.navbar_link}>
-            <Link to="/">Inicio</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                isMenuOpen ? setIsMenuOpen(false) : null;
+              }}
+            >
+              Inicio
+            </Link>
           </li>
           <li className={styledNavbar.navbar_link}>
-            <Link to={"/Nosotros"}>Nosotros</Link>
+            <Link
+              to={"/Nosotros"}
+              onClick={() => {
+                isMenuOpen ? setIsMenuOpen(false) : null;
+              }}
+            >
+              Nosotros
+            </Link>
           </li>
           <li className={styledNavbar.navbar_link}>
-            <HashLink smooth to="/#products">
+            <HashLink
+              smooth
+              to="/#products"
+              onClick={() => {
+                isMenuOpen ? setIsMenuOpen(false) : null;
+              }}
+            >
               Productos
             </HashLink>
           </li>
           <li className={styledNavbar.navbar_link}>
-            <HashLink smooth to="/#contactForm">
+            <HashLink
+              smooth
+              to="/#contactForm"
+              onClick={() => {
+                isMenuOpen ? setIsMenuOpen(false) : null;
+              }}
+            >
               Contacto
             </HashLink>
           </li>
@@ -103,7 +129,14 @@ export const Navbar = () => {
             {activeUser ? (
               <User onClick={() => setIsOptionsOpen(!isOptionsOpen)} />
             ) : (
-              <Link to={"/login"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Link
+                to={"/login"}
+                onClick={() => {
+                  {
+                    isMenuOpen ? setIsMenuOpen(false) : null;
+                  }
+                }}
+              >
                 Iniciar Sesión
               </Link>
             )}
