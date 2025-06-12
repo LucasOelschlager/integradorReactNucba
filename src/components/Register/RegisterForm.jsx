@@ -4,9 +4,10 @@ import * as Yup from "yup";
 import styledRegister from "../Register/RegisterForm.module.css";
 import { useNavigate } from "react-router";
 import { setUserInLocalStorage } from "../../utils/localStorage";
+import { Alert } from "../AlertComponent/Alert";
 export const RegisterForm = () => {
   const Navigate = useNavigate();
-
+  const [showAlert, setShowAlert] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
   const initialValues = {
     name: "",
@@ -47,9 +48,12 @@ export const RegisterForm = () => {
     setTimeout(() => {
       const { name, lastName, password, email } = values;
       setUserInLocalStorage({ name, lastName, password, email });
-      alert("Usuario creado correctamente, Inicie Sesión");
-      Navigate("/login");
+      setShowAlert(true);
       setIsRegistering(false);
+      setTimeout(() => {
+        setShowAlert(false);
+        Navigate("/login");
+      }, 2000);
     }, 3000);
   };
 
@@ -168,6 +172,7 @@ export const RegisterForm = () => {
           </Form>
         )}
       </Formik>
+      {showAlert && <Alert message="Usuario Creado Con exito" type="good" />}
     </div>
   );
 };

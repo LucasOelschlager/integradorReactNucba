@@ -5,10 +5,12 @@ import { useContext, useState } from "react";
 import * as Yup from "yup";
 import { UserContext } from "../../context/userContext";
 import { setActiveUser } from "../../utils/localStorage";
+import { Alert } from "../AlertComponent/Alert";
 
 export const LoginForm = () => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   const { isLoggedIn, setIsLoggedIn, setUserName } = useContext(UserContext);
   const initialValues = {
     email: "",
@@ -38,10 +40,13 @@ export const LoginForm = () => {
 
     setTimeout(() => {
       if (user) {
-        alert("Inicio de sesión Exitoso");
-        navigate("/");
         setActiveUser({ user });
         setIsLoggedIn(true);
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+          navigate("/");
+        }, 2000);
       } else {
         alert("Las credenciales no son validas");
       }
@@ -117,6 +122,7 @@ export const LoginForm = () => {
           </Form>
         )}
       </Formik>
+      {showAlert && <Alert message="Inicio de Sesión Exitoso" type="good" />}
     </div>
   );
 };
