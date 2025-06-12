@@ -103,7 +103,9 @@ export const Navbar = () => {
             {activeUser ? (
               <User onClick={() => setIsOptionsOpen(!isOptionsOpen)} />
             ) : (
-              <Link to={"/login"}>Iniciar Sesión</Link>
+              <Link to={"/login"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                Iniciar Sesión
+              </Link>
             )}
           </button>
         </div>

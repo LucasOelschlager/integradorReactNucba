@@ -1,0 +1,45 @@
+.container {
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0a0a;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+  font-family: roboto;
+}
+
+.list li {
+  color: #f4f7fa;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.list li span {
+  color: #ff7d00;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-height: 200px;
+  }
+
+  .list li {
+    font-size: 0.8rem;
+  }
+  .list li span {
+    font-size: 0.8rem;
+  }
+}
